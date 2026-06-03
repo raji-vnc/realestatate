@@ -49,7 +49,7 @@ ROOT_URLCONF = "realestate.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -70,7 +70,7 @@ WSGI_APPLICATION = "realestate.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "realestate_db",
+        "NAME": "realestate",
         "USER": "postgres",
         "PASSWORD": "root",
         "HOST": "localhost",
@@ -114,3 +114,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+# Custom User Model
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
