@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from django.utils import timezone
 
-from ..properties.models import Property
+from properties.models import Property
 # If you have an Inquiry model, import it similarly:
 # from ..inquiries.models import Inquiry
 

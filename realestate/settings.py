@@ -115,6 +115,15 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+# Additional directories where Django will look for static files
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # <‑‑ directory containing css, js, images, fonts
+]
+
+# Directory used by `collectstatic` for production (optional for dev)
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
 # Custom User Model
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
